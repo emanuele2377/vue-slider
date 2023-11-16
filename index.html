@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Sliders</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   
+
+<div id="app">
+
+    <div>
+
+        <h1>{{nome}}</h1>
+        <p>{{descrizione}}</p>
+        <p>{{prezzo}}</p>
+    </div>
+    
+<div class="img">
+
+    <img v-for= :src="immagine" class="img" :class="{ imgActive: (i == slideNumber) }">    
+
+</div>        
+        <img :src="immagine[slideNumber]">
+
+    
+        <button @click="back()">indietro</button>
+        <button @click="next()">avanti</button>
+
+    </div>
+
+</div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
